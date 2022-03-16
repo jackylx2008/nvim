@@ -54,7 +54,11 @@ return require("packer").startup(function()
     use("sainnhe/gruvbox-material") -- Colorscheme
     use("navarasu/onedark.nvim") -- Colorscheme
     use("folke/tokyonight.nvim") -- Colorscheme
-    --[[ use({  -- Colorscheme
+    use({
+        "catppuccin/nvim",
+        as = "catppuccin"
+    })
+    use({  -- Colorscheme
     'NTBBloodbath/doom-one.nvim',
     config = function()
       require('doom-one').setup({
@@ -85,7 +89,7 @@ return require("packer").startup(function()
         },
       })
     end,
-  }) ]]
+  })
     use("Mofiqul/vscode.nvim") -- Colorscheme
 
     -- 自动补全 cmp plugins
