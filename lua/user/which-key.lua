@@ -88,7 +88,6 @@ local mappings = {
     ["w"] = { "<cmd>w!<CR>", "Save" },
     ["q"] = { "<cmd>q!<CR>", "Exit" },
     ["c"] = { "<cmd>bp<bar>sp<bar>bn<bar>bd<CR>", "Close Buffer" },
-    ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
     ["f"] = {
         -- "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<cr>",
         "<cmd>Telescope find_files<CR>",
@@ -120,6 +119,13 @@ local mappings = {
             "<cmd>BufferOrderByLanguage<cr>",
             "Sort by language",
         },
+    },
+    h = {
+        name = "Hop",
+        w = { "<cmd>HopWord<CR>", "HopWord"},
+        l = { "<cmd>HopLine<CR>", "HopLine"},
+        c = { "<cmd>HopChar1<CR>", "HopChar1"},
+        h = { "<cmd>nohlsearch<CR>", "No Highlight" },
     },
     p = {
         name = "Packer",

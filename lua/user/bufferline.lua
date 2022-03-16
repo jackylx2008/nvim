@@ -11,7 +11,7 @@ end
 
 bufferline.setup({
     options = {
-        numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
+        numbers = "ordinal", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
         close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
         right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
         left_mouse_command = "buffer %d", -- can be a string | function, see "Mouse actions"
@@ -40,8 +40,17 @@ bufferline.setup({
         max_name_length = 30,
         max_prefix_length = 30, -- prefix used when a buffer is de-duplicated
         tab_size = 21,
-        diagnostics = false, -- | "nvim_lsp" | "coc",
+        diagnostics = "nvim_lsp", -- | "nvim_lsp" | "coc",
         diagnostics_update_in_insert = false,
+        -- 显示 LSP 报错图标
+        diagnostics_indicator = function(count, level, diagnostics_dict, context)
+            local s = " "
+            for e, n in pairs(diagnostics_dict) do
+                local sym = e == "error" and " " or (e == "warning" and " " or "")
+                s = s .. n .. sym
+            end
+            return s
+        end,
         -- diagnostics_indicator = function(count, level, diagnostics_dict, context)
         --   return "("..count..")"
         -- end,
@@ -61,7 +70,15 @@ bufferline.setup({
         --     return true
         --   end
         -- end,
-        offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+        offsets = { 
+            { 
+                filetype = "NvimTree", 
+                text = "File Explorer", 
+                highlight = "Directory",
+                text_align = "left",
+                padding = 1 
+            } 
+        },
         show_buffer_icons = true,
         show_buffer_close_icons = true,
         show_close_icon = true,

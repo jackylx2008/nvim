@@ -52,7 +52,7 @@ set.laststatus = 0 -- Always display the status line
 set.relativenumber = true -- 设置相对行号
 set.number = true -- set numbered lines
 -- setwindowlocal.number = true                            -- Line numbers 显示行号
-set.background = "dark" -- tell vim what the background color looks like
+-- set.background = "dark" -- tell vim what the background color looks like
 set.showtabline = 4 -- Always show tabs
 set.showmode = false -- We don't need to see things like -- INSERT -- anymore
 set.backup = false -- This is recommended by coc
@@ -97,3 +97,5 @@ set.title = true -- set the title of window to the value of the titlestring
 set.undofile = true -- enable persistent undo
 set.numberwidth = 4 -- set number column width to 2 {default 4}
 set.signcolumn = "yes" -- always show the sign column ,otherwise it would shift the text each time
+-- 是否透明背景
+vim.g.background_transparency = true

@@ -2,9 +2,9 @@
 require("catppuccin").setup(
     {
         -- 透明背景
-        transparent_background = false,
+        transparent_background = vim.g.background_transparency,
         -- 使用终端背景色
-        term_color = false,
+        term_color = true,
         -- 代码样式
         styles = {
             comments = "italic",
@@ -34,7 +34,7 @@ require("catppuccin").setup(
                 enabled = true,
                 show_root = false,
                 -- 透明背景
-                transparent_panel = false,
+                transparent_panel = vim.g.background_transparency,
             },
             native_lsp = {
                 enabled = true,
