@@ -215,5 +215,4 @@ return require("packer").startup(function()
 		--   require'hop'.setup { keys = 'etovxqpdygfblzhckisuran' }
 		-- end
 	})
-	use("ur4ltz/surround.nvim")
 end)
