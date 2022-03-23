@@ -96,6 +96,7 @@ local mappings = {
     ["F"] = { "<cmd>Telescope live_grep <CR>", "Find Text" },
     -- ["P"] = { "<cmd>Telescope projects<cr>", "Projects" },
     ["u"] = { "<cmd>UndotreeToggle<CR>", "Undotree" },
+
     b = {
         name = "Buffers",
         j = { "<cmd>BufferPick<cr>", "Jump" },
