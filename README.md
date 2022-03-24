@@ -12,6 +12,7 @@
 1. 在上一个版本的基础上增加了`nvim`里面的中文输入法,用来解决在`Mac`和`WSL`平台上`nvim`中文输入切换的问题
 2. 增加了`EesyMontion`的`nvim`版本`hop.nvim`
 3. 上一个版本里面的`format.nvim`在`github`上被原作者下架,改用`neoformat`.使用`neoformat`一样需要安装各个语言对应的格式化工具.目前安装的格式化工具如下:
+
 | 语言   | 格式化工具    |
 |--------------- | --------------- |
 | c & cpp   | clang-format    |
