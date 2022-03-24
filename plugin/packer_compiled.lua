@@ -249,11 +249,6 @@ _G.packer_plugins = {
     path = "/home/liuxin/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
     url = "https://github.com/kyazdani42/nvim-tree.lua"
   },
-  ["nvim-treesitter"] = {
-    loaded = true,
-    path = "/home/liuxin/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
-    url = "https://github.com/nvim-treesitter/nvim-treesitter"
-  },
   ["nvim-ts-autotag"] = {
     loaded = true,
     path = "/home/liuxin/.local/share/nvim/site/pack/packer/start/nvim-ts-autotag",
@@ -263,11 +258,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/liuxin/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
     url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
-  },
-  ["nvim-ts-rainbow"] = {
-    loaded = true,
-    path = "/home/liuxin/.local/share/nvim/site/pack/packer/start/nvim-ts-rainbow",
-    url = "https://github.com/p00f/nvim-ts-rainbow"
   },
   ["nvim-web-devicons"] = {
     loaded = true,

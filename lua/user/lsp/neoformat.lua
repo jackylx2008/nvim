@@ -14,6 +14,7 @@ vim.g.neoformat_only_msg_on_error = 1
 vim.cmd([[
 augroup fmt
   autocmd!
+  " autocmd BufWritePre * Neoformat
   autocmd BufWritePre * undojoin | Neoformat
 augroup END
 ]])

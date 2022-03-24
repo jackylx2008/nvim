@@ -39,5 +39,4 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 vim.g.ZFVimIM_openapi_enable = 1
 vim.g.ZFVimIM_pinyin_gitUserEmail = "jackylx2008@hotmail.com"
 vim.g.ZFVimIM_pinyin_gitUserName = "jackylx2008"
-vim.g.ZFVimIM_pinyin_gitUserToken = "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"
 

@@ -194,7 +194,7 @@ return require("packer").startup(function()
 		end,
 	})
 	-- 退格引线
-	use("lukas-reineke/indent-blankline.nvim")
+	use("   lukas-reineke/indent-blankline.nvim")
 	-- Speed up loading Lua modules in Neovim to improve startup time.
 	use("lewis6991/impatient.nvim")
 	-- Dashboard
