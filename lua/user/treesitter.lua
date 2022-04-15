@@ -9,7 +9,7 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagn
 })
 require("nvim-treesitter.configs").setup({
     -- ensure_installed = {"c", "html", "javascript", "cpp", "python", "lua"}, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-    ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+    -- ensure_installed = "maintained", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
     sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
     ignore_install = { "" }, -- List of parsers to ignore installing
     highlight = {
@@ -25,6 +25,9 @@ require("nvim-treesitter.configs").setup({
     context_commentstring = {
         enable = true,
         enable_autocmd = false,
+    },
+    window = {
+        documentation = "native",
     },
     -- for html javascript etc files autotag
     autotag = {

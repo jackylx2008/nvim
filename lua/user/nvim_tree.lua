@@ -1,6 +1,6 @@
 local g = vim.g
 g.nvim_tree_highlight_opened_files = 1
-g.nvim_tree_indent_markers = 1
+-- g.nvim_tree_indent_markers = 1
 -- 目录后加上反斜杠 /
 g.nvim_tree_add_trailing = 1
 
@@ -18,6 +18,16 @@ vim.g.nvim_tree_icons = {
 		untracked = "U",
 		ignored = "◌",
 	},
+    renderer = {
+        indent_markers = {
+          enable = true,
+          icons = {
+            corner = "└ ",
+            edge = "│ ",
+            none = "  ",
+          },
+        },
+    },
 	folder = {
 		default = "",
 		open = "",
