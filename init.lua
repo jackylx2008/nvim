@@ -1,7 +1,6 @@
 require("user.settings")
 require("user.keymappings")
 require("user.plugins")
--- require("user.plugins_test")
 require("user.colorscheme")
 
 require("user.which-key")
