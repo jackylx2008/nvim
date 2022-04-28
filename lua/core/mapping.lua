@@ -1,3 +1,4 @@
+---@diagnostic disable: undefined-global
 vim.g.mapleader = " "
 
 local mapping = {}
@@ -17,57 +18,57 @@ mapping.register = function(range, gruop_name, bufnr)
 end
 
 mapping.global = {
-    basic = {
-        {{"i"}, "jj", "<esc>", "noremap|silent"},
-        {{"t"}, "<esc>", "<c-\\><c-n>", "noremap|silent"},
-        {{"n"}, "\\\\", ":qa!<cr>", "noremap|silent"},
-        {{"n"}, "<esc>", ":nohlsearch<cr>", "noremap|silent"},
-        {{"n"}, "<c-u>", "10k", "noremap|silent"},
-        {{"n"}, "<c-d>", "10j", "noremap|silent"},
-        {{"n"}, "<m-k>", "<c-w>-", "noremap|silent"},
-        {{"n"}, "<m-j>", "<c-w>+", "noremap|silent"},
-        {{"n"}, "<m-h>", "<c-w><", "noremap|silent"},
-        {{"n"}, "<m-l>", "<c-w>>", "noremap|silent"},
-        {{"n"}, "<leader>cs", "<cmd>set spell!<cr>", "noremap|silent"},
-        {{"i", "c", "t"}, "<m-w>", "<c-right>", "noremap"},
-        {{"i", "c", "t"}, "<m-b>", "<c-left>", "noremap"},
-        {{"i", "c", "t"}, "<m-k>", "<up>", "noremap"},
-        {{"i", "c", "t"}, "<m-j>", "<down>", "noremap"},
-        {{"i", "c", "t"}, "<m-h>", "<left>", "noremap"},
-        {{"i", "c", "t"}, "<m-l>", "<right>", "noremap"},
-        {
-            {"n", "x"},
-            "j",
-            function()
-                return vim.v.count > 0 and "j" or "gj"
-            end,
-            "noremap|silent|expr"
-        },
-        {
-            {"n", "x"},
-            "k",
-            function()
-                return vim.v.count > 0 and "k" or "gk"
-            end,
-            "noremap|silent|expr"
-        },
-        {
-            {"n", "x"},
-            "H",
-            function()
-                return vim.v.count > 0 and "^" or "g^"
-            end,
-            "noremap|silent|expr"
-        },
-        {
-            {"n", "x"},
-            "L",
-            function()
-                return vim.v.count > 0 and "$" or "g$"
-            end,
-            "noremap|silent|expr"
-        }
-    },
+    -- basic = {
+    --    {{"i"}, "jj", "<esc>", "noremap|silent"},
+    --    {{"t"}, "<esc>", "<c-\\><c-n>", "noremap|silent"},
+    --    {{"n"}, "\\\\", ":qa!<cr>", "noremap|silent"},
+    --    {{"n"}, "<esc>", ":nohlsearch<cr>", "noremap|silent"},
+    --    {{"n"}, "<c-u>", "10k", "noremap|silent"},
+    --    {{"n"}, "<c-d>", "10j", "noremap|silent"},
+    --    {{"n"}, "<m-k>", "<c-w>-", "noremap|silent"},
+    --    {{"n"}, "<m-j>", "<c-w>+", "noremap|silent"},
+    --    {{"n"}, "<m-h>", "<c-w><", "noremap|silent"},
+    --    {{"n"}, "<m-l>", "<c-w>>", "noremap|silent"},
+    --    {{"n"}, "<leader>cs", "<cmd>set spell!<cr>", "noremap|silent"},
+    --    {{"i", "c", "t"}, "<m-w>", "<c-right>", "noremap"},
+    --    {{"i", "c", "t"}, "<m-b>", "<c-left>", "noremap"},
+    --    {{"i", "c", "t"}, "<m-k>", "<up>", "noremap"},
+    --    {{"i", "c", "t"}, "<m-j>", "<down>", "noremap"},
+    --    {{"i", "c", "t"}, "<m-h>", "<left>", "noremap"},
+    --    {{"i", "c", "t"}, "<m-l>", "<right>", "noremap"},
+    --    {
+    --        {"n", "x"},
+    --        "j",
+    --        function()
+    --            return vim.v.count > 0 and "j" or "gj"
+    --        end,
+    --        "noremap|silent|expr"
+    --    },
+    --    {
+    --        {"n", "x"},
+    --        "k",
+    --        function()
+    --            return vim.v.count > 0 and "k" or "gk"
+    --        end,
+    --        "noremap|silent|expr"
+    --    },
+    --    {
+    --        {"n", "x"},
+    --        "H",
+    --        function()
+    --            return vim.v.count > 0 and "^" or "g^"
+    --        end,
+    --        "noremap|silent|expr"
+    --    },
+    --    {
+    --        {"n", "x"},
+    --        "L",
+    --        function()
+    --            return vim.v.count > 0 and "$" or "g$"
+    --        end,
+    --        "noremap|silent|expr"
+    --    }
+    -- },
     nvim_tree = {
         {{"n"}, "<leader>1", "<cmd>NvimTreeToggle<cr>", "noremap|silent"},
         {{"n"}, "<leader>fc", "<cmd>NvimTreeFindFile<cr>", "noremap|silent"}
@@ -94,8 +95,8 @@ mapping.global = {
         {{"n"}, "gs", ":Switch<cr>", "noremap|silent"}
     },
     vim_vsnip = {
-        {{"i", "s"}, "<s-tab>", "vsnip#jumpable(-1)?'<Plug>(vsnip-jump-prev)':'<s-tab>'", "expr|silent"},
-        {{"i", "s"}, "<tab>", "vsnip#jumpable(1)? '<Plug>(vsnip-jump-next)':'<tab>'", "expr|silent"}
+        -- {{"i", "s"}, "<s-tab>", "vsnip#jumpable(-1)?'<Plug>(vsnip-jump-prev)':'<s-tab>'", "expr|silent"},
+        -- {{"i", "s"}, "<tab>", "vsnip#jumpable(1)? '<Plug>(vsnip-jump-next)':'<tab>'", "expr|silent"}
     },
     hop = {
         {{"n", "v"}, "ss", "<cmd>HopWord<cr>", "noremap|silent"},
@@ -356,8 +357,8 @@ mapping.plugin = {
         noremal_delete_yank = "dd"
     },
     nvim_cmp = {
-        prev_item = "<c-p>",
-        next_item = "<c-n>",
+        prev_item = "<c-k>",
+        next_item = "<c-j>",
         confirm = "<cr>",
         next_item_or_confirm = "<tab>",
         prev_5_item = "<c-u>",
