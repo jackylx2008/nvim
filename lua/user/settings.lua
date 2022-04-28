@@ -59,11 +59,13 @@ set.backup = false -- This is recommended by coc
 set.writebackup = false -- This is recommended by coc
 set.updatetime = 100 -- Faster completion
 set.timeoutlen = 200 -- By default timeoutlen is 1000 ms
+
 -- set.formatoptions-=cro                -- Stop newline continution of comments
-cmd("au BufEnter * set formatoptions-=cro")
+-- cmd("au BufEnter * set formatoptions-=cro")
+vim.opt_local.formatoptions = vim.opt_local.formatoptions - {"c", "r", "o"}
+
 set.clipboard = "unnamedplus" -- Copy paste between vim and everything else app之间共享剪贴板
 
--- Themes gruvbox 设置gruvbox高亮主题
 set.cursorline = true -- 突出显示当前行
 set.cursorcolumn = true -- 突出显示当前列
 
