@@ -32,7 +32,7 @@ set.fileencoding = "utf-8" -- The encoding written to file
 set.ruler = true -- Show the cursor position all the time 显示光标所在的行号和列号
 set.cmdheight = 2 -- More space for displaying messags 下方命令行高度
 
-set.iskeyword:append({ "-" }) -- treat dash separated words as a word text objec 字母含有'-'认为是一个单词
+set.iskeyword:append({"-"}) -- treat dash separated words as a word text objec 字母含有'-'认为是一个单词
 set.mouse = "a" -- Enable your mouse 在nvim界面可以用鼠标点击移动光标到点击位置
 set.splitbelow = true -- Horizontal splits will automatically be below
 set.splitright = true -- Vertical splits will automatically be to the right
@@ -61,8 +61,8 @@ set.updatetime = 100 -- Faster completion
 set.timeoutlen = 200 -- By default timeoutlen is 1000 ms
 
 -- set.formatoptions-=cro                -- Stop newline continution of comments
--- cmd("au BufEnter * set formatoptions-=cro")
-vim.opt_local.formatoptions = vim.opt_local.formatoptions - {"c", "r", "o"}
+cmd("au BufEnter * set formatoptions-=cro")
+-- vim.opt_local.formatoptions = vim.opt_local.formatoptions - {"c", "r", "o"}
 
 set.clipboard = "unnamedplus" -- Copy paste between vim and everything else app之间共享剪贴板
 
@@ -87,7 +87,7 @@ set.signcolumn = "yes"
 --   unlet mycolors
 -- endfunctionc
 set.colorcolumn = "99999" -- fixes indentline for now
-vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
+vim.opt.completeopt = {"menuone", "noselect"} -- mostly just for cmp
 -- set.foldmethod = "manual" -- folding, set to "expr" for treesitter based folding
 set.guifont = "monospace:h17" -- the font used in graphical neovim applications
 set.foldexpr = "" -- set to "nvim_treesitter#foldexpr()" for treesitter based folding
