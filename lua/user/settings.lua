@@ -1,23 +1,5 @@
 local set = vim.opt
-local cmd = vim.cmd
--- 是否在屏幕最后一行显示命令
-set.showcmd = true
--- 是否开启语法高亮
-set.syntax = "enable"
--- 是否特殊显示空格等字符
-set.list = true
--- 设定自动缩进的策略为 plugin
-set.filetype = "plugin"
--- 是否开启命令行补全
-set.wildmenu = true
--- 是否开启单词拼写检查
-set.spell = true
--- 设定单词拼写检查的语言
-set.spelllang = "en_us,cjk"
--- 是否开启代码折叠
-set.foldenable = true
--- 指定代码折叠的策略是按照缩进进行的
-set.foldmethod = "indent"
+local cmd = vim.cmd -- 是否在屏幕最后一行显示命令 set.showcmd = true 是否开启语法高亮 set.syntax = "enable" 是否特殊显示空格等字符 set.list = true 设定自动缩进的策略为 plugin set.filetype = "plugin" 是否开启命令行补全 set.wildmenu = true 是否开启单词拼写检查 set.spell = true 设定单词拼写检查的语言 set.spelllang = "en_us,cjk" 是否开启代码折叠 set.foldenable = true 指定代码折叠的策略是按照缩进进行的 set.foldmethod = "indent"
 -- 指定代码折叠的最高层级为 100
 set.foldlevel = 100
 
@@ -48,7 +30,7 @@ set.expandtab = true -- Converts tabs to spaces
 set.smartindent = true -- Makes indenting smart文件类型自动检测
 set.autoindent = true -- Good auto indent自动换行对齐
 -- setbufferlocal.autoindent = true
-set.laststatus = 0 -- Always display the status line
+set.laststatus = 2 -- Always display the status line
 set.relativenumber = false -- 设置相对行号
 set.number = true -- set numbered lines
 -- setwindowlocal.number = true                            -- Line numbers 显示行号
@@ -67,7 +49,7 @@ cmd("au BufEnter * set formatoptions-=cro")
 set.clipboard = "unnamedplus" -- Copy paste between vim and everything else app之间共享剪贴板
 
 set.cursorline = true -- 突出显示当前行
-set.cursorcolumn = true -- 突出显示当前列
+set.laststatus = 2 -- Always display the status line
 
 -- Avoids updating the screen before commands are completed
 set.lazyredraw = true
