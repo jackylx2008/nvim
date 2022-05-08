@@ -219,4 +219,6 @@ return require("packer").startup(function()
 	use("Pocco81/AutoSave.nvim")
 	--AutoRead
 	-- use("djoshea/vim-autoread")
+	-- WARN:SnippetRun
+	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 end)
