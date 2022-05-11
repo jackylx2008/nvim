@@ -1,3 +1,5 @@
+-- TODO:可实现较多的功能,具体见如下视频,但是照抄配置使用效果不理想
+-- https://www.bilibili.com/video/BV1P34y1e7SF/?spm_id_from=pageDriver
 local actions = require("telescope.actions")
 
 require("telescope").setup({

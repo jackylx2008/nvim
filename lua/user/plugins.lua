@@ -17,12 +17,12 @@ if fn.empty(fn.glob(install_path)) > 0 then
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
-vim.cmd([[
-    augroup packer_user_config
-        autocmd!
-        autocmd BufWritePost plugins.lua source <afile> | PackerSync
-    augroup end
-]])
+-- vim.cmd([[
+--     augroup packer_user_config
+--         autocmd!
+--         autocmd BufWritePost plugins.lua source <afile> | PackerSync
+--     augroup end
+-- ]])
 
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
@@ -121,6 +121,19 @@ return require("packer").startup(function()
 		"nvim-telescope/telescope.nvim",
 		requires = { { "nvim-lua/plenary.nvim" } },
 	})
+	use({
+		"nvim-telescope/telescope-fzf-native.nvim",
+		run = "make",
+	})
+	-- use {
+	--   "nvim-telescope/telescope-frecency.nvim",
+	--   requires = {"tami5/sqlite.lua"}   -- NOTE: need to install sqlite lib
+	-- }
+	use("nvim-telescope/telescope-ui-select.nvim") -- TODO:有何功能未知
+	use("nvim-telescope/telescope-live-grep-raw.nvim")
+	use("MattesGroeger/vim-bookmarks")
+	use("tom-anders/telescope-vim-bookmarks.nvim")
+	use("nvim-telescope/telescope-dap.nvim")
 
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) -- Better colorized the code
@@ -219,6 +232,6 @@ return require("packer").startup(function()
 	use("Pocco81/AutoSave.nvim")
 	--AutoRead
 	-- use("djoshea/vim-autoread")
-	-- WARN:SnippetRun
+	-- SnippetRun
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 end)
