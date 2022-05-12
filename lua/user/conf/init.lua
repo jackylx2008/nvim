@@ -1,4 +1,4 @@
-require("user.conf.which-key")
+require("user.conf.which_key")
 require("user.conf.todo_comments")
 require("user.conf.cmp")
 require("user.conf.telescope")

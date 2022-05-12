@@ -104,6 +104,16 @@ return require("packer").startup(function()
 	use("hrsh7th/cmp-nvim-lua")
 	-- use 'hrsh7th/cmp-vsnip'
 	-- use 'hrsh7th/vim-vsnip'
+	-- use "quangnguyen30192/cmp-nvim-tags"
+	use("jsfaint/gen_tags.vim")
+	use("ray-x/cmp-treesitter")
+	use("f3fora/cmp-spell") -- spell check
+	-- use "github/copilot.vim"  -- Copilot setup,
+	-- use {
+	--   "tzachar/cmp-tabnine", -- use ":CmpTabnineHub" command to login
+	--   after = "nvim-cmp",
+	--   run = 'bash ./install.sh',
+	-- }
 
 	-- snippets
 	use("L3MON4D3/LuaSnip") --snippet engine
