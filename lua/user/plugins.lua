@@ -50,6 +50,12 @@ packer.init({
 return require("packer").startup(function()
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim") -- Packer itself
+	use("lewis6991/impatient.nvim") -- Speed up loading Lua modules in Neovim to improve startup time.
+	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
+	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
+	use("rcarriga/nvim-notify") -- notify
+	use("kyazdani42/nvim-web-devicons") -- icons
+
 	use("shaunsingh/nord.nvim") -- Colorscheme
 	use("sainnhe/gruvbox-material") -- Colorscheme
 	use("navarasu/onedark.nvim") -- Colorscheme
@@ -126,11 +132,7 @@ return require("packer").startup(function()
 	use("jose-elias-alvarez/null-ls.nvim") -- for formatters and linters
 
 	-- Telescope
-	use({
-		-- Telescope! The fast and efficient way to find the file, context, git etc.
-		"nvim-telescope/telescope.nvim",
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
+	use("nvim-telescope/telescope.nvim")
 	use({
 		"nvim-telescope/telescope-fzf-native.nvim",
 		run = "make",
@@ -148,33 +150,21 @@ return require("packer").startup(function()
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" }) -- Better colorized the code
 	use("JoosepAlviste/nvim-ts-context-commentstring")
+	use("nvim-treesitter/nvim-treesitter-textobjects") -- TODO:不知道具体有什么功能
 
 	-- Git
 	use("lewis6991/gitsigns.nvim")
 
 	--format
 	use("lukas-reineke/format.nvim")
-	use({
-		"sbdchd/neoformat",
-	})
+	use("sbdchd/neoformat")
 	-- Bottem status line
-	use({
-		"nvim-lualine/lualine.nvim",
-		requires = { "kyazdani42/nvim-web-devicons", opt = true },
-	})
+	use("nvim-lualine/lualine.nvim")
 	use("SmiteshP/nvim-gps")
 	-- Top buffers line
-	use({
-		"akinsho/bufferline.nvim",
-		requires = "kyazdani42/nvim-web-devicons",
-	})
-	use({
-		-- File explorer
-		"kyazdani42/nvim-tree.lua",
-		requires = {
-			"kyazdani42/nvim-web-devicons", -- optional, for file icon
-		},
-	})
+	use("akinsho/bufferline.nvim")
+	-- File explorer
+	use("kyazdani42/nvim-tree.lua")
 	use("windwp/nvim-ts-autotag") -- Automatic insert the tag, like <html></html>
 	use("p00f/nvim-ts-rainbow") -- Colorized brackets etc.
 	use("windwp/nvim-autopairs") -- Automatic finish the brackets etc.
@@ -211,15 +201,12 @@ return require("packer").startup(function()
 	use("numToStr/Comment.nvim") -- Easily comment stuff
 	use({
 		"folke/todo-comments.nvim",
-		requires = "nvim-lua/plenary.nvim",
 		config = function()
 			require("todo-comments").setup({})
 		end,
 	})
 	-- 退格引线
 	use("lukas-reineke/indent-blankline.nvim")
-	-- Speed up loading Lua modules in Neovim to improve startup time.
-	use("lewis6991/impatient.nvim")
 	-- Dashboard
 	use("goolord/alpha-nvim")
 	use("antoinemadec/FixCursorHold.nvim")
