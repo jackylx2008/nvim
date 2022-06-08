@@ -53,7 +53,10 @@ return require("packer").startup(function()
 	use("lewis6991/impatient.nvim") -- Speed up loading Lua modules in Neovim to improve startup time.
 	use("nvim-lua/popup.nvim") -- An implementation of the Popup API from vim in Neovim
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
-	use("rcarriga/nvim-notify") -- notify
+	require("notify").setup({ -- notify
+		background_colour = "#000000",
+	})
+
 	use("kyazdani42/nvim-web-devicons") -- icons
 
 	use("shaunsingh/nord.nvim") -- Colorscheme
